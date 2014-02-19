@@ -1,8 +1,9 @@
+DIR="$( cd "$( dirname "$0" )" && pwd )"
 DATE=`date +%s`
 if [ -f ~/.tmux.conf ]
 then
-  cp ~/.tmux.conf ~/.tmux.$DATE.conf
+  cp -v ~/.tmux.conf ~/.tmux.$DATE.conf
 fi
 
-
-ln -sf $PWD/tmux.conf ~/.tmux.conf
+ln -sfv $DIR/tmux.conf ~/.tmux.conf
+echo "zsh config installed"
